@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: gray;
+        }
+
+        table {
+            margin-left: 31em;
+            margin-top: 10em;
+            width: 30%;
+            text-align: center;
+            border-color: orange;
+            background-color: white;
+
+        }
+
+        tr {
+            cursor: pointer;
+        }
+
+        td {
+            border-style: double;
+            border-color: brown;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+        <table id="table" border="1">
+
+            <tr>
+                <td>Raj</td>
+                <td>Accountant</td>
+            </tr>
+            <tr>
+                <td>Maris</td>
+                <td>FrontEndDeveloper</td>
+            </tr>
+            <tr>
+                <td>Gowtham</td>
+                <td>Team Analyst</td>
+            </tr>
+            <tr>
+                <td>Prasanth</td>
+                <td>TeamLead</td>
+            </tr>
+            <tr>
+                <td>Sathyamoorthy</td>
+                <td>FullStackDeveloper</td>
+            </tr>
+            <tr>
+                <td>Gowtham</td>
+                <td>Team Analyst</td>
+            </tr>
+            <tr>
+                <td>Arun</td>
+                <td>Team Analyst</td>
+            </tr>
+            <tr>
+                <td>Kumar</td>
+                <td>HR</td>
+            </tr>
+        </table>
+        <input type="text" id="one" style="margin-left: 37em;margin-top: 2em;width: 12%">
+        <input type="text" id="two" style="margin-left: 2em;margin-top: 2em;width: 15%">
+    </div>
+    <script>
+        var table = document.getElementById("table");
+        for (var i = 1; i < table.rows.length; i++) {
+            table.rows[i].onclick = function () {
+
+                document.getElementById("one").value = this.cells[0].innerHTML;
+                document.getElementById("two").value = this.cells[1].innerHTML;
+
+            };
+        }
+    </script>
+
+</body>
+
+</html>
