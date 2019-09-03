@@ -75,7 +75,7 @@
     </div>
     <script>
         var table = document.getElementById("table");
-        for (var i = 1; i < table.rows.length; i++) {
+        for (var i = 0; i < table.rows.length; i++) {
             table.rows[i].onclick = function () {
 
                 document.getElementById("one").value = this.cells[0].innerHTML;
